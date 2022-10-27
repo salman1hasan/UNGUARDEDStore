@@ -1,9 +1,4 @@
-
-
-
-
-
-
+https://vimeo.com/764408047
 
 I am currently working on a UNGUARDED Store using MERN stack specifically with NEXTJS. I will be uploading the progress. This is a a template of what is being made. I will upload screenshots of the project being worked on as it contains unique designs and contains custom backend work as well!
 
