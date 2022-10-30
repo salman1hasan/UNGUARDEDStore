@@ -18,6 +18,7 @@ const router= useRouter();
          return;
        }
       dispatch({ type: 'CART_ADD_ITEM', payload: {...product,quantity}});
+      router.push('/cart');
    }
   return (
     <div className='card'>
@@ -45,4 +46,3 @@ const router= useRouter();
     </div>
   );
 }
-
