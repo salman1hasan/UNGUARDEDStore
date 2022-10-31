@@ -530,6 +530,24 @@ Return { ...state,cart:{ ...state.cart,cartItems}};
 
  
 
+Creating Counter Page 
+
+1.Go to cart.js and scroll down to find the item. Get rid of item quantity and add curly brackets to the cart 
+
+2. Add an array and [...Array(item.countInStock).keys)] create...array item.countinstock and use map function to convert numbers options for the select box 
+
+3.Use option and set the key={x+1} value={x+1} and wrap this in a section and add sleect value and add an onchange and create an updatecarthandler function with item and e.target.value. 
+
+4.Updatecarthandler = (item,qty) => { 
+
+Const quantity=Number(qty); Add item and quantity and const quantity = Number(qty) 
+
+5.Add dispatch type Cart_Add_Item payload ...item,quantity  
+
+6.Update it to item.quantity for value 
+
+ 
+
 UNGUARDED NextJS Navigation Bar specifically with ReactJS bootstrap 
 
 1.Npm i react-bootstrap 
@@ -937,15 +955,11 @@ Added a router.push and a route.
 
  
 
- 
+Added Updating to quantity. 
 
- 
+1.I decided to add the quantity counter to the item. 
 
- 
-
- 
-
- 
+2.Instead of using x+1 I used only x and I changed the updatecarthandler toproduct as item wasn’t defined, I kept the cart as is 
 
  
 
@@ -956,6 +970,12 @@ Things I want to add, but I want to as they aren't completely necessary at this 
 As I get advanced, I want to add a header above this navigation bar that shows the logo like Nike and I want to add the search bar effect and a transition where it goes to a different page, but since im still learning im going to leave this behind 
 
 How can I have it like amazon where it’s like you don’t send to link but it shows the quantity in stock and also has a counter where there is like 20-30 products?  
+
+ 
+
+ 
+
+ 
 
  
 
