@@ -975,13 +975,123 @@ How can I have it like amazon where it’s like you don’t send to link but it 
 
  
 
+NEXTJS Store adjustments 
+
+1. Make the quantity button smaller  
+
+2. Create a better cart design for the Shop where it is more presentable  
+
+3.Have to fix breaking point 
+
+4.Is there a way I can custom the css to orange 
+
+5.Since I have a layout and a container and a card layout for the store I have to specifically make the images bigger thus I can include all the stuff that is necessary 
+
  
+
+Things that need to be fixed [Layout and breaking points] (The layout looks great but when it breaks its really choppy and not smooth due to the fact theres too many elements wrapped in elements). 
+
+This would take more time than 1-2 days but it is worth the time to fix. 
+
+ 
+
+How do I add multiple products with multiple images for color changes?! 
+
+ 
+
+Way to fix the layout 
+
+Instead of using layout and having such a strict shrinker im better off using a div and then wrapping the margin left and the margin right 
+
+ 
+
+Product select handler adjustment 
+
+1.Move the select value into the product price 
+
+2.How to position the movement to the right 
+
+3. I also randomly changed the value 
+
+4.Added a div class and added a section 
+
+5.Changed it to md for now because section looks better in medium 
+
+6.Ways to accomplish is to move elements around and put them in the right position 
+
+7. Had to change the md: grid-cols-4 md:gap2 
+
+8.To style properly have br between text and style accordingly.  
+
+9.To add the product item where you can change the quantity of the cart, all you have to do is go to slug.js and add the same information and then add the item. Instead of product as it isn’t defined and get the same result 
+
+10.Change the font size of the select value to become smaller to fit the appearance of the website 
+
+11.Have to update trash button. Update size color using classname similar to the navbar 
+
+12.Added a price and made some font adjustments, been at it for hours trying to figure out how to add a unique layout  
+
+ 
+
+Save Cart Items 
+
+1.NPM Install js-cookie 
+
+2.Import JS cookies  
+
+3.Remove cookies.get cart if it exists then use json.parse(Cookie.get(‘cart’)): 
+
+{cartItems: [] }, 
+
+4.Update the cartAddItems, cookies.set(‘cart’, JSON.stringify(...state.cart, cartItems }) 
+
+5.Add the same thing in the remove item cart and that’s it  
+
+6.Have to render this import dynamic from ‘next/js’ 
+
+7.Cut export default and import dynamic function export default dynamic(()=>Promise.resolve(CartScreen), {ssr:false}) 
+
+8.Have to go to layout.js and import useState and press tab and set it to cartItemsCount; 
+
+9.Define useEffect, setCartItemsCount to the value already in the header 
+
+ 
+
+ 
+
+Added body{min-width315px) [changes margin of mobile page] 
+
+To style properly I added a wrapper to make the component better I can make this into a card element as well to make it better 
+
+I added a logo/image placement to create a better display[Needs to be designed better but can move on] 
+
+https://www.youtube.com/watch?v=znqUwx0b0HI 
+
+ 
+
+Adjustments I had to make to make this cookie work with my project 
+
+I had to create Navbar specifically in the component, when that adjustment was made, I was able to find out that the navbar in the main app file was the reason the file wasn’t working. Then from there I imported the navbar to all the files and I was able to make it work. It updates on refresh and everything but there was one error, the cartitemcounter had to stay the old way and not useeffect for some reason, but it worked. Specifically for this project I had to import useEffect 
 
  
 
  
 
  
+
+ 
+
+Things I want to add 
+
+Multi products, different colors 
+
+Can add more elements to the cart amount 
+
+Specifically how to create a row in nextjs and how to add the price where it is in the right position 
+
+How to add the check out where it goes to the footer would be pretty cool but this is going to take some research and probably an experts input when I get to people who are really good at building frontend 
+
+Cartitems count needs to be styled better but ill work on that once the project is complete or I can work on it earlier 
 
  
 
